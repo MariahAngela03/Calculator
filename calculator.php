@@ -1,14 +1,14 @@
 <?php
+header('Content-Type: application/json; charset=utf-8');
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $calcu = $_POST['calcu'];
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['expression'])) {
+    $expression = trim($_POST['expression']);
 
     try {
-        // Evaluate the expression safely
-        $result = eval("return $calcu;");
-        echo $result;
+        $result = eval("return ($expression);");
+        echo json_encode(['status' => 'success', 'result' =>$result]);
     } catch (ParseError $e) {
-        echo "Invalid";
+        echo json_encode(['status' => 'error', 'message' => 'Invalid expression']);
     }
 }
 ?>
