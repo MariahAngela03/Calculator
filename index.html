@@ -47,7 +47,9 @@
         document.getElementById('display').value = '';
     }
 
-    let calcu = document.getElementById('display').value;
+    async function calculate() {
+    let display = document.getElementById('display').value;
+    let calcu = display.value;
     //Send the value to PHP
     fetch('calculator.php', {
         method: 'POST',
@@ -60,6 +62,7 @@
     .then(result => {
         document.getElementById('display').value = result;
     })
+}
 </script>
     
 </body>
