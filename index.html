@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="Calculator">
+    <input type="text" id="display" readonly>
+    <div class="buttons">
+        <button type="button" onclick="append('7')">7</button>
+        <button type="button" onclick="append('8')">8</button>
+        <button type="button" onclick="append('9')">9</button>
+        <button type="button" onclick="append('/')">/</button>
+
+        <button type="button" onclick="append('4')">4</button>
+        <button type="button" onclick="append('5')">5</button>
+        <button type="button" onclick="append('6')">6</button>
+        <button type="button" onclick="append('*')">x</button>
+
+        <button type="button" onclick="append('*')">1</button>
+        <button type="button" onclick="append('1')">2</button>
+        <button type="button" onclick="append('2')">3</button>
+        <button type="button" onclick="append('-')">-</button>
+
+        <button type="button" onclick="append('0')">0</button>
+        <button type="button" onclick="append('.')">.</button>
+        <button type="button" onclick="append('+')">+</button>
+
+        <button type="submit" class="equal">=</button>
+
+    </div>
+    <div>
+
+    </div>
+
+<script>
+    function append(value) {
+        document.getElementById('display').value += value;
+    }
+</script>
+    
+</body>
+</html>
