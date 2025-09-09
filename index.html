@@ -21,9 +21,9 @@
         <button type="button" onclick="append('6')">6</button>
         <button type="button" onclick="append('*')">x</button>
 
-        <button type="button" onclick="append('*')">1</button>
-        <button type="button" onclick="append('1')">2</button>
-        <button type="button" onclick="append('2')">3</button>
+        <button type="button" onclick="append('1')">1</button>
+        <button type="button" onclick="append('2')">2</button>
+        <button type="button" onclick="append('3')">3</button>
         <button type="button" onclick="append('-')">-</button>
 
         <button type="button" onclick="append('0')">0</button>
@@ -64,11 +64,9 @@
         if (data.status === 'success') {
             display.value = data.result;
         } else {
-            display.value = "Error1";    
-            setTimeout(() => {
-                        clearDisplay();
-                    }, 2000);
-                }
+            display.value = "Error";    
+        }
+        
         } catch (error) {
             display.value = "Error";
         }
